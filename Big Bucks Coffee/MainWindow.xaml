@@ -7,21 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="600">
     <Grid x:Name="MainGrid" SizeChanged="MainGrid_SizeChanged">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Background.jpg" />
+        </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Border Background="#2f5cb6">
-            <Frame Content="Frame" />
-        </Border>
-        <Border Grid.Column ="1" Background="#1f3d7a" />
-        <Border Grid.Row="1"  Background="#1f3d7a" />
-        <Border Background="#2f5cb6" Grid.Column="1" Grid.Row="1" />
-        <ScrollViewer Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
             <WrapPanel x:Name="myWrap"  ScrollViewer.CanContentScroll="True" />
         </ScrollViewer>
     </Grid>

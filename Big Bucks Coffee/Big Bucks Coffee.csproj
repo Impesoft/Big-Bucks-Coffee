@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\americano-small.jpg" />
+    <None Remove="Assets\Background.jpg" />
+    <None Remove="Assets\cappuccino-small.jpg" />
+    <None Remove="Assets\espresso-small.jpg" />
+    <None Remove="Assets\latte-small.jpg" />
+    <None Remove="Assets\macchiato-small.jpg" />
     <None Remove="ClassDiagram1.cd" />
     <None Remove="Stock.png" />
   </ItemGroup>
@@ -17,6 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\americano-small.jpg" />
+    <Resource Include="Assets\Background.jpg" />
+    <Resource Include="Assets\cappuccino-small.jpg" />
+    <Resource Include="Assets\espresso-small.jpg" />
+    <Resource Include="Assets\latte-small.jpg" />
+    <Resource Include="Assets\macchiato-small.jpg" />
     <Resource Include="Stock.png" />
   </ItemGroup>
 

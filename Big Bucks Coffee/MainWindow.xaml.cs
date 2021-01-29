@@ -24,9 +24,20 @@ namespace Big_Bucks_Coffee
         {
             InitializeComponent();
             int aantalkeer = 5;
-            string[] name = new string[5] { "Appels", "Peren", "Bananen", "Appelsienen", "Citroenen" };
+            string[] name = new string[5] {
+                "Americano",
+                "Cappuccino",
+                "Espresso",
+                "Latte",
+                "Macchiato" };
+            string[] images = new string[5] {
+                "/Assets/americano-small.jpg",
+                "/Assets/cappuccino-small.jpg",
+                "/Assets/espresso-small.jpg",
+                "/Assets/latte-small.jpg",
+                "/Assets/macchiato-small.jpg" };
             //   Content = ShowMyControl(aantalkeer);
-            ShowMyControl(aantalkeer, name);
+            ShowMyControl(aantalkeer, name, images);
             foreach (var control in this.myWrap.Children)
             {
                 UserControl1 myUserControl = control as UserControl1;
@@ -40,16 +51,22 @@ namespace Big_Bucks_Coffee
         }
 
         //        private Grid ShowMyControl(int aantalkeer)
-        private void ShowMyControl(int aantalkeer, string[] name)
+        private void ShowMyControl(int aantalkeer, string[] name, string[] images)
         {
             for (int i = 0; i < aantalkeer; i++)
             {
+                // Uri myUri = new Uri(@"P:\Cursus .NET C#\Github\Voorbereiding Project2\Big Bucks Coffee\Big Bucks Coffee\" + images[i], UriKind.RelativeOrAbsolute);
+                // BmpBitmapDecoder decoder = new BmpBitmapDecoder(myUri, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
+                // BitmapSource bitmapSource = decoder.Frames[0];
+
                 var g = new UserControl1
                 {
                     Name = name[i],
                     HorizontalAlignment = HorizontalAlignment.Left,
                     Height = 420
                 };
+
+                g.ProductImage.Source = new BitmapImage(new Uri(images[i], UriKind.Relative));
                 g.ProductName.Content = name[i];
                 g.Price.Content = $"Price: € {i * 5 + 1}";
                 g.TextBox.Text = $"Hello {i} World";
