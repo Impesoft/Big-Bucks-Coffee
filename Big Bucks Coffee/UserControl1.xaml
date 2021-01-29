@@ -5,29 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:Big_Bucks_Coffee"
              mc:Ignorable="d"
-             d:DesignHeight="400" d:DesignWidth="250">
-    <Grid>
+             d:DesignHeight="400" d:DesignWidth="250" Width="270" Height="420">
+    <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="150*" />
+            <RowDefinition Height="47*" />
+            <RowDefinition Height="47*" />
+            <RowDefinition Height="48*" />
+            <RowDefinition Height="48*" />
         </Grid.RowDefinitions>
-        <Border Background="#2f5cb6" />
-        <Border Grid.Column ="1" Background="#1f3d7a" />
-        <Border Grid.Row="1"  Grid.RowSpan="4" Background="#1f3d7a" />
-        <Border Background="#2f5cb6" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="1" />
+        <Border Background="#CC7777FF" Padding="10" Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Grid.ColumnSpan="2" />
 
-        <Image Height="200" Width="200" Grid.ColumnSpan="2" Source="/Stock.png" />
-        <Label Content="ProductName" Grid.Row="1" Grid.ColumnSpan="2" FontSize="25" HorizontalAlignment="Center" />
-        <Label Content="Price" Grid.Row="2" VerticalAlignment="Center" />
-        <CheckBox FlowDirection="RightToLeft" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="2" Content="Is In Stock" />
-        <TextBox Text="TextBox" Margin="20 10" Grid.Row="3" Grid.ColumnSpan="2" TextWrapping="Wrap" Width="auto" />
-        <Button Content="Button" Margin="20 10" Grid.Row="4" Grid.ColumnSpan="2" Width="auto" />
+        <Image Height="200" Width="200" Grid.ColumnSpan="2" Source="/Stock.png" Margin="15,0,15,37" Grid.RowSpan="3" />
+        <Label x:Name="ProductName" Content="ProductName" Grid.Row="2" Grid.ColumnSpan="2" FontSize="25" HorizontalAlignment="Left" Margin="34,0,0,0" />
+        <Label Margin="20,0,20,0" x:Name="Price" Content="Price" Grid.Row="3" VerticalAlignment="Center" />
+        <CheckBox x:Name="IsInStock" FlowDirection="RightToLeft" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3" Content="Is In Stock" />
+        <TextBox x:Name="TextBox" Text="TextBox" Margin="20,10,20,10" Grid.Row="4" Grid.ColumnSpan="2" TextWrapping="Wrap" Width="auto" />
+        <Button x:Name="AddToCart" Content="Add To Cart" Margin="20,10,20,10" Grid.Row="5" Grid.ColumnSpan="2" Width="auto" Click="AddToCart_Click" />
     </Grid>
 </UserControl>

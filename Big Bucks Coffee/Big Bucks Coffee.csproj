@@ -8,7 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClassDiagram1.cd" />
     <None Remove="Stock.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="ClassDiagram1.cd" />
   </ItemGroup>
 
   <ItemGroup>
