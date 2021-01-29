@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Big_Bucks_Coffee
 {
-    internal class ShoppingCart
+    public class ShoppingCart
     {
         private List<IBeverage> _beverages;
 

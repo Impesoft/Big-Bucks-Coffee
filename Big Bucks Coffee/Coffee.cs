@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Big_Bucks_Coffee
 {
-    internal class Coffee : IBeverage
+    public class Coffee : IBeverage
     {
         private int _id;
 

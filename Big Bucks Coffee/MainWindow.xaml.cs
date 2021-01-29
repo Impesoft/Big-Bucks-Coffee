@@ -31,11 +31,11 @@ namespace Big_Bucks_Coffee
                 "Latte",
                 "Macchiato" };
             string[] images = new string[5] {
-                "/Assets/americano-small.jpg",
-                "/Assets/cappuccino-small.jpg",
-                "/Assets/espresso-small.jpg",
-                "/Assets/latte-small.jpg",
-                "/Assets/macchiato-small.jpg" };
+                "/Assets/americano-small.png",
+                "/Assets/cappuccino-small.png",
+                "/Assets/espresso-small.png",
+                "/Assets/latte-small.png",
+                "/Assets/macchiato-small.png" };
             //   Content = ShowMyControl(aantalkeer);
             ShowMyControl(aantalkeer, name, images);
             foreach (var control in this.myWrap.Children)

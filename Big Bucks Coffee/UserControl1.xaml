@@ -19,12 +19,12 @@
             <RowDefinition Height="48*" />
             <RowDefinition Height="48*" />
         </Grid.RowDefinitions>
-        <Border Background="#FFFFFF" Padding="10" Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Grid.ColumnSpan="2" />
+        <Border Background="#77333333" Padding="10" Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Grid.ColumnSpan="2" />
 
         <Image x:Name="ProductImage" Height="200" Width="200" Grid.ColumnSpan="2" Source="/Assets/americano-small.jpg" Margin="15,0,15,37" Grid.RowSpan="3" />
-        <Label x:Name="ProductName" Content="ProductName" Grid.Row="2" Grid.ColumnSpan="2" FontSize="25" HorizontalAlignment="Left" Margin="34,0,0,0" />
-        <Label Margin="20,0,20,0" x:Name="Price" Content="Price" Grid.Row="3" VerticalAlignment="Center" />
-        <CheckBox x:Name="IsInStock" FlowDirection="RightToLeft" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3" Content="Is In Stock" />
+        <Label x:Name="ProductName" Content="ProductName" Grid.Row="2" Grid.ColumnSpan="2" FontSize="25" HorizontalAlignment="Left" Margin="34,0,0,0" Foreground="White" />
+        <Label Margin="20,0,20,0" x:Name="Price" Content="Price" Grid.Row="3" VerticalAlignment="Center" Foreground="White" FontFamily="Arial" FontSize="14" />
+        <CheckBox x:Name="IsInStock" FlowDirection="RightToLeft" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3" Content="Is In Stock" Foreground="White" FontFamily="Arial" FontWeight="Normal" FontStyle="Normal" />
         <TextBox x:Name="TextBox" Text="TextBox" Margin="20,10,20,10" Grid.Row="4" Grid.ColumnSpan="2" TextWrapping="Wrap" Width="auto" />
         <Button x:Name="AddToCart" Content="Add To Cart" Margin="20,10,20,10" Grid.Row="5" Grid.ColumnSpan="2" Width="auto" Click="AddToCart_Click" />
     </Grid>

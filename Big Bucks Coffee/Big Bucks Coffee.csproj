@@ -9,13 +9,17 @@
 
   <ItemGroup>
     <None Remove="Assets\americano-small.jpg" />
+    <None Remove="Assets\americano-small.png" />
     <None Remove="Assets\Background.jpg" />
     <None Remove="Assets\cappuccino-small.jpg" />
+    <None Remove="Assets\cappuccino-small.png" />
     <None Remove="Assets\espresso-small.jpg" />
+    <None Remove="Assets\espresso-small.png" />
     <None Remove="Assets\latte-small.jpg" />
+    <None Remove="Assets\latte-small.png" />
     <None Remove="Assets\macchiato-small.jpg" />
+    <None Remove="Assets\macchiato-small.png" />
     <None Remove="ClassDiagram1.cd" />
-    <None Remove="Stock.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,12 +28,16 @@
 
   <ItemGroup>
     <Resource Include="Assets\americano-small.jpg" />
+    <Resource Include="Assets\americano-small.png" />
     <Resource Include="Assets\Background.jpg" />
     <Resource Include="Assets\cappuccino-small.jpg" />
+    <Resource Include="Assets\cappuccino-small.png" />
     <Resource Include="Assets\espresso-small.jpg" />
+    <Resource Include="Assets\espresso-small.png" />
     <Resource Include="Assets\latte-small.jpg" />
+    <Resource Include="Assets\latte-small.png" />
     <Resource Include="Assets\macchiato-small.jpg" />
-    <Resource Include="Stock.png" />
+    <Resource Include="Assets\macchiato-small.png" />
   </ItemGroup>
 
 </Project>
