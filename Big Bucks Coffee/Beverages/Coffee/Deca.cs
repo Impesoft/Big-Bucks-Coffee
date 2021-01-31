@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Big_Bucks_Coffee
 {
-    internal class Deca : Coffee
+    internal class Deca : Espresso
     {
         public Deca()
 

@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Big_Bucks_Coffee
 {
-    internal class Latte : Coffee
+    internal class Latte : Espresso
     {
         //public typeOfRoast TypeOfRoast { get; set; }
 

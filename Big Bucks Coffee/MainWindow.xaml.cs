@@ -23,45 +23,76 @@ namespace Big_Bucks_Coffee
     {
         public List<IBeverage> purchaselist = new List<IBeverage>();
         public ShoppingCart MyShoppingCart;
-        //   public List<string> BeverageTypes = new string[5] {
-        //public string[] BeverageTypes = new string[5] {
-        //        "Americano",
-        //        "Cappuccino",
-        //        "Espresso",
-        //        "Latte",
-        //        "Macchiato" };
+        public Window MainMenu;
+
+        public IEnumerable<Type> basetypes = Assembly.GetExecutingAssembly().GetTypes().
+                                                    Where(t => t.Namespace == "Big_Bucks_Coffee").ToList().
+                                            Where(t => t.BaseType != null).
+                                                        Where(t => (t.IsAbstract == false)).
+                                                        Where(t => (t.BaseType.ToString().Contains("Big_Bucks_Coffee"))).ToList().
+            GroupBy(x => x.BaseType.Name).Select(g => g.First()).ToList();
 
         public IEnumerable<Type> theList = Assembly.GetExecutingAssembly().GetTypes().
                                             Where(t => t.Namespace == "Big_Bucks_Coffee").ToList().
                                             Where(t => t.BaseType != null).
-                                            Where(t => t.IsAbstract == false).
+                                            Where(t => (t.IsAbstract == false)).
                                             Where(t => (t.BaseType.ToString().Contains("Big_Bucks_Coffee"))).ToList();
 
         public MainWindow()
         {
             InitializeComponent();
-            int aantalkeer = 5;
-            //string[] BeverageTypes = new string[5] {
-            //    "Americano",
-            //    "Cappuccino",
-            //    "Espresso",
-            //    "Latte",
-            //    "Macchiato" };
-            string[] images = new string[5] {
-                "/Assets/americano-small.png",
-                "/Assets/cappuccino-small.png",
-                "/Assets/espresso-small.png",
-                "/Assets/latte-small.png",
-                "/Assets/macchiato-small.png" };
+            ShowMenu(basetypes);
+            //this.Content = MainMenu.Content;
+            this.Title = "Main Menu";
+            //    ShowCreatedLists();
+            //ShowMyControl();
+            //AddButtonClickEvents();
+        }
 
-            string types = "";
-            foreach (Type type in theList)
+        private void ShowMenu(IEnumerable<Type> basetypes)
+        {
+            StackPanel menu = new StackPanel() { Width = 600, Height = 450 };
+            double numberOFMenuItems = basetypes.ToList().Count;
+            double buttonHeight = 45;
+
+            foreach (Type menuItem in basetypes)
             {
-                types += $"{type.Name}\n";
-                //MessageBox.Show(type.ToString());
+                Button menuButton = new Button()
+                {
+                    Background = Brushes.Transparent,
+                    Name = menuItem.BaseType.Name.ToString(),
+                    Content = menuItem.BaseType.Name.ToUpper(),
+                    Height = buttonHeight,
+                };
+                AddMenuButtonsClickEvent(menuButton);
+                menu.Children.Add(menuButton);
             }
-            MessageBox.Show(types);
-            ShowMyControl();//(aantalkeer, BeverageTypes, images);
+
+            myWrap.Children.Add(menu);
+        }
+
+        private void AddMenuButtonsClickEvent(Button thisButton)
+        {
+            // StackPanel myStackpanel = Button as StackPanel;
+
+            //  if (myStackpanel != null)
+            // {
+            thisButton.Click += randomevent;
+            // }
+        }
+
+        private void randomevent(object sender, RoutedEventArgs e)
+        {
+            Button test = sender as Button;
+            //MessageBox.Show($">>{test.Name}<<");
+            ShowMyControl(test.Name.ToString());
+            AddButtonClickEvents();
+        }
+
+        //}
+
+        private void AddButtonClickEvents()
+        {
             foreach (var control in this.myWrap.Children)
             {
                 UserControl1 myUserControl = control as UserControl1;
@@ -73,12 +104,37 @@ namespace Big_Bucks_Coffee
             }
         }
 
-        private void ShowMyControl()   // (int aantalkeer, string[] name, string[] images)
+        private void ShowCreatedLists()
         {
-            //for (int i = 0; i < aantalkeer; i++)
-            //{
-            //    CreateNewUsercontrol(name, images, i);
-            //}
+            string types = "";
+            foreach (Type type in basetypes)
+            {
+                types += $"{type.BaseType.Name}\n";
+            }
+            MessageBox.Show(types);
+            types = "";
+            foreach (Type type in theList)
+            {
+                types += $"{type.Name}\n";
+            }
+            MessageBox.Show(types);
+        }
+
+        private void ShowMyControl(string selected)
+        {
+            myWrap.Children.OfType<UserControl1>().ToList().ForEach(b => myWrap.Children.Remove(b));
+
+            foreach (Type typeOfDrink in theList.Where(x => x.BaseType.Name.Contains(selected)))
+            {
+                Beverage drink = (Beverage)Activator.CreateInstance(typeOfDrink);
+                string myName = drink.Name;
+                string imagePath = drink.Image;
+                CreateNewUsercontrol(myName, imagePath, typeOfDrink.Name);
+            }
+        }
+
+        private void ShowMyControl()
+        {
             foreach (Type typeOfDrink in theList)
             {
                 Beverage drink = (Beverage)Activator.CreateInstance(typeOfDrink);
@@ -105,29 +161,10 @@ namespace Big_Bucks_Coffee
             myWrap.Children.Add(g);
         }
 
-        //private void CreateNewUsercontrol(string[] name, string[] images, int i)
-        //{
-        //    var g = new UserControl1
-        //    {
-        //        Name = name[i],
-        //        HorizontalAlignment = HorizontalAlignment.Left,
-        //        Height = 420
-        //    };
-
-        //    g.ProductImage.Source = new BitmapImage(new Uri(images[i], UriKind.Relative));
-        //    g.ProductName.Content = name[i];
-        //    g.Price.Content = $"Price: € {i * 5 + 1}";
-        //    g.TextBox.Text = $"Hello {i} World";
-        //    g.IsInStock.IsChecked = (i % 2 == 0);
-        //    myWrap.Children.Add(g);
-        //}
-
         private void AddToCartButtonClickedInUserControl(object sender, EventArgs e)
         {
-            // Cast object class to MyUserClass
             UserControl1 myControl = sender as UserControl1;
             string selectedBeverage = myControl.Name.ToString();
-            //     int productId = myControl.PizzaID;
             AddProductToCart(StringtoBeverage(selectedBeverage));
         }
 
@@ -137,12 +174,8 @@ namespace Big_Bucks_Coffee
             {
                 if (beverage.Name == selectedBeverage)
                 {
-                    // Beverage obj = new Americano();
-                    //    System.Windows.MessageBox.Show($"Big_Bucks_Coffee.{selectedBeverage}=" + new Americano().GetType().ToString());
-                    //return new Americano();
-                    Type hai = Type.GetType($"Big_Bucks_Coffee.{selectedBeverage}", true);
-                    return (Beverage)Activator.CreateInstance(hai);  //Or you could cast here if you already knew the type somehow
-                                                                     // return (Type.GetType($"Big_Bucks_Coffee.{selectedBeverage}", true))o;
+                    Type hai = Type.GetType($"Big_Bucks_Coffee.{selectedBeverage}", true); // get type of drink
+                    return (Beverage)Activator.CreateInstance(hai);  // create drink of type and cast to beverage
                 }
             }
             MessageBox.Show("error " + selectedBeverage);
@@ -151,21 +184,7 @@ namespace Big_Bucks_Coffee
 
         private void AddProductToCart(Beverage selectedBeverage)
         {
-            //                MyShoppingCart.AddItemToCart(ikbeneen);
             System.Windows.MessageBox.Show(selectedBeverage.GetType().Name);
-            //    break;
-
-            //default:
-            //    System.Windows.MessageBox.Show("not a Americano!");
-
-            //    break;
-            //   var pizza = _repo.GetPizza(productId);
-            //    _cart.AddProductToCart(pizza);
-        }
-
-        private void MainGrid_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            //this.Width = this.Width - (this.Width % 250);
         }
     }
 }
