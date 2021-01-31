@@ -8,18 +8,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="americano-small.png" />
+    <None Remove="Assets\all-kinds-of-herbal-tea-500x500.jpg" />
     <None Remove="Assets\americano-small.jpg" />
     <None Remove="Assets\americano-small.png" />
+    <None Remove="Assets\apricot-500x500.jpg" />
     <None Remove="Assets\Background.jpg" />
     <None Remove="Assets\cappuccino-small.jpg" />
     <None Remove="Assets\cappuccino-small.png" />
+    <None Remove="Assets\chary-stalk-500x500.jpg" />
+    <None Remove="Assets\classic-500x500.jpg" />
+    <None Remove="Assets\Coffee-Beans.jpg" />
     <None Remove="Assets\espresso-small.jpg" />
     <None Remove="Assets\espresso-small.png" />
     <None Remove="Assets\latte-small.jpg" />
     <None Remove="Assets\latte-small.png" />
+    <None Remove="Assets\lemon-500x500.jpg" />
     <None Remove="Assets\macchiato-small.jpg" />
     <None Remove="Assets\macchiato-small.png" />
+    <None Remove="Assets\mfcommercial-21120030.jpg" />
+    <None Remove="Assets\pngtree-coffee-bean-hand-drawn-line-art-background-pattern-image_130847.jpg" />
+    <None Remove="Assets\unnamed.jpg" />
     <None Remove="ClassDiagram1.cd" />
+    <None Remove="Images\americano.jpg" />
+    <None Remove="Images\banana.jpg" />
+    <None Remove="Images\black.jpg" />
+    <None Remove="Images\cappuccino.jpg" />
+    <None Remove="Images\chocolate.jpg" />
+    <None Remove="Images\deca.jpg" />
+    <None Remove="Images\espresso.jpg" />
+    <None Remove="Images\green.jpg" />
+    <None Remove="Images\iced.jpg" />
+    <None Remove="Images\mint.jpg" />
+    <None Remove="Images\strawberry.jpg" />
+    <None Remove="Images\vanilla.jpg" />
+    <None Remove="unnamed.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,17 +50,40 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="americano-small.png" />
+    <Resource Include="Assets\all-kinds-of-herbal-tea-500x500.jpg" />
     <Resource Include="Assets\americano-small.jpg" />
     <Resource Include="Assets\americano-small.png" />
+    <Resource Include="Assets\apricot-500x500.jpg" />
     <Resource Include="Assets\Background.jpg" />
     <Resource Include="Assets\cappuccino-small.jpg" />
     <Resource Include="Assets\cappuccino-small.png" />
+    <Resource Include="Assets\chary-stalk-500x500.jpg" />
+    <Resource Include="Assets\classic-500x500.jpg" />
+    <Resource Include="Assets\Coffee-Beans.jpg" />
     <Resource Include="Assets\espresso-small.jpg" />
     <Resource Include="Assets\espresso-small.png" />
     <Resource Include="Assets\latte-small.jpg" />
     <Resource Include="Assets\latte-small.png" />
+    <Resource Include="Assets\lemon-500x500.jpg" />
     <Resource Include="Assets\macchiato-small.jpg" />
     <Resource Include="Assets\macchiato-small.png" />
+    <Resource Include="Assets\mfcommercial-21120030.jpg" />
+    <Resource Include="Assets\pngtree-coffee-bean-hand-drawn-line-art-background-pattern-image_130847.jpg" />
+    <Resource Include="Assets\unnamed.jpg" />
+    <Resource Include="Images\americano.jpg" />
+    <Resource Include="Images\banana.jpg" />
+    <Resource Include="Images\black.jpg" />
+    <Resource Include="Images\cappuccino.jpg" />
+    <Resource Include="Images\chocolate.jpg" />
+    <Resource Include="Images\deca.jpg" />
+    <Resource Include="Images\espresso.jpg" />
+    <Resource Include="Images\green.jpg" />
+    <Resource Include="Images\iced.jpg" />
+    <Resource Include="Images\mint.jpg" />
+    <Resource Include="Images\strawberry.jpg" />
+    <Resource Include="Images\vanilla.jpg" />
+    <Resource Include="unnamed.jpg" />
   </ItemGroup>
 
 </Project>

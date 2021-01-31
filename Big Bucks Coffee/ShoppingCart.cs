@@ -6,7 +6,7 @@ namespace Big_Bucks_Coffee
 {
     public class ShoppingCart
     {
-        private List<IBeverage> _beverages;
+        private List<IBeverage> _beverages = new List<IBeverage>();
 
         public void AddItemToCart(IBeverage beverage)
         {
@@ -30,7 +30,7 @@ namespace Big_Bucks_Coffee
 
         public List<IBeverage> GetItemsInCart()
         {
-            return new List<IBeverage>();
+            return _beverages;
         }
     }
 }

@@ -6,19 +6,10 @@
         xmlns:local="clr-namespace:Big_Bucks_Coffee"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="600">
-    <Grid x:Name="MainGrid" SizeChanged="MainGrid_SizeChanged">
-        <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Background.jpg" />
-        </Grid.Background>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
-            <WrapPanel x:Name="myWrap"  ScrollViewer.CanContentScroll="True" />
-        </ScrollViewer>
-    </Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="/Assets/Coffee-Beans.jpg" Stretch="Uniform" TileMode="FlipXY" AlignmentX="Left" AlignmentY="Top" ViewboxUnits="RelativeToBoundingBox" ViewportUnits="Absolute" Viewport="0,0,1920,1200"></ImageBrush>
+    </Window.Background>
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+        <WrapPanel x:Name="myWrap"  ScrollViewer.CanContentScroll="True" />
+    </ScrollViewer>
 </Window>

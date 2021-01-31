@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Big_Bucks_Coffee
 {
-    public interface IBeverage
+    public interface old_IBeverage
     {
         abstract int Id { get; set; }
 
@@ -14,7 +14,7 @@ namespace Big_Bucks_Coffee
 
         string ImageLocation { get; set; }
 
-        void Beverage() { }
+        //   void Beverage() { }
 
         string ToString();
     }
