@@ -13,7 +13,7 @@ namespace Big_Bucks_Coffee
         {
             Name = "Pina Colada";
             Price = 7.99;
-            //Image = "pina";
+            Image = "Images/pina.jpg";
             Description = "The Piña Colada  is a sweet cocktail made with rum, cream of coconut or coconut milk, and pineapple juice, usually served either blended or shaken with ice.";
         }
     }

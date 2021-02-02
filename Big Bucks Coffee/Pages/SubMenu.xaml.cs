@@ -37,13 +37,11 @@ namespace Big_Bucks_Coffee
             {
                 if (control is UserControl1 myUserControl)
                 {
-                    //myUserControl.AddToCartButtonClicked += AddToCartButtonClickedInUserControl;
                     myUserControl.AddToCartButtonClicked += (s, e) =>
                     {
                         MessageBox.Show("Test");
                         UserControl1 myControl = s as UserControl1;
                         string selectedBeverage = myControl.Name.ToString();
-                        //     AddProductToCart(StringtoBeverage(selectedBeverage));
                     };
                 }
             }

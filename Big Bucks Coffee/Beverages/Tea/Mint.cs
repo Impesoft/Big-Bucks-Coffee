@@ -5,8 +5,6 @@ namespace Big_Bucks_Coffee
 {
     internal class Mint : _Tea
     {
-        //public typeOfTea TypeOfTea { get; set; }
-
         public Mint()
         {
             Name = "Mint Tea";

@@ -13,7 +13,7 @@ namespace Big_Bucks_Coffee
         {
             Name = "White Russian";
             Price = 8.99;
-            //Image = "WhiteRussian";
+            Image = "/Images/WhiteRussian.jpg";
             Description = "The Dude's favorite drink ";
         }
     }

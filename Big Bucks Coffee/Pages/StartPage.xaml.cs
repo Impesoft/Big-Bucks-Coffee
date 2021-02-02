@@ -23,18 +23,15 @@ namespace Big_Bucks_Coffee
         public List<IBeverage> purchaselist = new List<IBeverage>();
         public ShoppingCart MyShoppingCart;
 
-        // public WrapPanel myWrap = new WrapPanel();
         public SubMenu mySubmenu = new SubMenu();
 
         public WrapPanel subMyWrap = new WrapPanel();
 
         public IEnumerable<Type> basetypes = Assembly.GetExecutingAssembly().GetTypes().
-                                                    Where(t => t.Namespace == "Big_Bucks_Coffee").ToList().
-                                                     Where(t => (t.BaseType != null)).
-                                                    //  Where(t => (t.IsAbstract) == false).ToList().
-                                                    //  Where(t => !(t.BaseType.ToString().Contains("Beverage"))).
-                                                    Where(t => (t.BaseType.ToString().Contains("Big_Bucks_Coffee"))).ToList().
-                                                    Where(t => (t.Name.ToString()[0] == '_')).ToList();
+                                                    Where(type => type.Namespace == "Big_Bucks_Coffee").ToList().
+                                                     Where(type => (type.BaseType != null)).
+                                                    Where(type => (type.BaseType.ToString().Contains("Big_Bucks_Coffee"))).ToList().
+                                                    Where(type => (type.Name.ToString()[0] == '_')).ToList();
 
         public IEnumerable<Type> theList = Assembly.GetExecutingAssembly().GetTypes().
                                             Where(t => t.Namespace == "Big_Bucks_Coffee").ToList().
@@ -46,8 +43,6 @@ namespace Big_Bucks_Coffee
         {
             this.Title = "Begin Pagina";
             InitializeComponent();
-            // Menu MainMenu = new Menu();
-            //   this.myGrid.Children.Add(myWrap);
             ShowMenu(basetypes);
         }
 
@@ -57,12 +52,8 @@ namespace Big_Bucks_Coffee
 
             foreach (Type menuItem in basetypes)
             {
-                //Type magicType = menuItem;
-                //ConstructorInfo magicConstructor = magicType.GetConstructor(Type.EmptyTypes);
-                //Beverage magicClassObject = (Beverage)magicConstructor.Invoke(new object[] { });
-                //static var test = _CocktailInvoke;
                 StackPanel buttonStack = new StackPanel() { Orientation = Orientation.Vertical };
-                Beverage thisBeverage = (Beverage)Activator.CreateInstance(theList.Where(t => t.BaseType == menuItem).FirstOrDefault());//
+                Beverage thisBeverage = (Beverage)Activator.CreateInstance(theList.Where(t => t.BaseType == menuItem).FirstOrDefault());
                 Image drinkType = new Image()
                 {
                     Name = menuItem.Name.ToString(),
@@ -75,10 +66,13 @@ namespace Big_Bucks_Coffee
 
                 Button newMenuItem = new Button()
                 {
-                    // Background = Brushes.Transparent,
+                    Background = Brushes.Transparent,
+                    Foreground = new SolidColorBrush(Colors.White),
                     Name = menuItem.Name.ToString(),
                     Content = menuItem.Name.ToUpper(),
                     Height = buttonHeight,
+                    FontSize = 24,
+                    BorderThickness =  ,
 
                     HorizontalAlignment = HorizontalAlignment.Stretch,
                     VerticalAlignment = VerticalAlignment.Center

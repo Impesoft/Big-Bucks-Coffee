@@ -10,8 +10,6 @@ namespace Big_Bucks_Coffee
 {
     internal class Americano : _Espresso
     {
-        // public typeOfRoast TypeOfRoast { get; set; }
-
         public Americano()
 
         {
@@ -23,20 +21,8 @@ namespace Big_Bucks_Coffee
 
         public override List<Control> CreateControls()
         {
-            ComboBox CTypeOfRoast = new ComboBox
-            {
-                //foreach (var item in Enum.GetValues(typeof(typeOfRoast)))
-                //{
-                //    CTypeOfRoast.Items.Add(item + " Roast");
-                //}
-
-                SelectedIndex = 1
-            };
-            List<Control> test2 = base.CreateControls();
-            CTypeOfRoast.Name = "CTypeOfRoast";
-            //CTypeOfRoast.TextChanged += new System.EventHandler(this.SetControls);
-            test2.Add(CTypeOfRoast);
-            return test2;
+            List<Control> control = base.CreateControls();
+            return control;
         }
 
         public override void SetControls(object sender, EventArgs e)
@@ -44,9 +30,7 @@ namespace Big_Bucks_Coffee
             base.SetControls(sender, e);
             if ((sender as Control).Name == "CTypeOfRoast")
             {
-                var x = sender as ComboBox;
-
-                //TypeOfRoast = (typeOfRoast)((ComboBox)x).SelectedIndex;
+                ComboBox x = sender as ComboBox;
             }
         }
     }

@@ -9,8 +9,6 @@ namespace Big_Bucks_Coffee
 {
     internal class Chocolate : _Milkshake
     {
-        //public typeOfChocolate TypeOfChocolate { get; set; }
-
         public Chocolate()
         {
             Name = "Chocolate Shake";

@@ -42,11 +42,16 @@
     <None Remove="Images\espresso.jpg" />
     <None Remove="Images\green.jpg" />
     <None Remove="Images\iced.jpg" />
+    <None Remove="Images\latte.jpg" />
+    <None Remove="Images\macchiato.jpg" />
     <None Remove="Images\Milkshake.png" />
     <None Remove="Images\mint.jpg" />
+    <None Remove="Images\pina.jpg" />
     <None Remove="Images\strawberry.jpg" />
     <None Remove="Images\Tea.png" />
     <None Remove="Images\vanilla.jpg" />
+    <None Remove="Images\WhiteRussian.jpg" />
+    <None Remove="Images\wsour.jfif" />
     <None Remove="Pages\Splash.png" />
     <None Remove="unnamed.jpg" />
   </ItemGroup>
@@ -89,11 +94,16 @@
     <Resource Include="Images\espresso.jpg" />
     <Resource Include="Images\green.jpg" />
     <Resource Include="Images\iced.jpg" />
+    <Resource Include="Images\latte.jpg" />
+    <Resource Include="Images\macchiato.jpg" />
     <Resource Include="Images\Milkshake.png" />
     <Resource Include="Images\mint.jpg" />
+    <Resource Include="Images\pina.jpg" />
     <Resource Include="Images\strawberry.jpg" />
     <Resource Include="Images\Tea.png" />
     <Resource Include="Images\vanilla.jpg" />
+    <Resource Include="Images\WhiteRussian.jpg" />
+    <Resource Include="Images\wsour.jfif" />
     <Resource Include="Pages\Splash.png" />
     <Resource Include="unnamed.jpg" />
   </ItemGroup>
