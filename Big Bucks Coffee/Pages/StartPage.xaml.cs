@@ -217,7 +217,8 @@ namespace Big_Bucks_Coffee
             productInfo.ProductDescription.Text = selectedBeverage.Description;
 
             MessageBox.Show(productInfo.ToString());
-            NavigationService.Navigate(productInfo);
+            //NavigationService.Navigate(productInfo);
+            mySubmenu.NavigationService.Navigate(productInfo);
         }
 
         private void Sluiten(object sender, RoutedEventArgs e)
