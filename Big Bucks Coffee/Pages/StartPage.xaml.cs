@@ -72,7 +72,7 @@ namespace Big_Bucks_Coffee
                     Content = menuItem.Name.ToUpper(),
                     Height = buttonHeight,
                     FontSize = 24,
-                    BorderThickness =  ,
+                    //BorderThickness =  ,
 
                     HorizontalAlignment = HorizontalAlignment.Stretch,
                     VerticalAlignment = VerticalAlignment.Center
@@ -134,7 +134,6 @@ namespace Big_Bucks_Coffee
                     //myUserControl.AddToCartButtonClicked += AddToCartButtonClickedInUserControl;
                     myUserControl.AddToCartButtonClicked += (s, e) =>
                     {
-                        MessageBox.Show("Test");
                         UserControl1 myControl = s as UserControl1;
                         string selectedBeverage = myControl.Name.ToString();
                         AddProductToCart(StringtoBeverage(selectedBeverage));
@@ -168,8 +167,10 @@ namespace Big_Bucks_Coffee
             {
                 Name = typeOfDrink,
                 HorizontalAlignment = HorizontalAlignment.Left,
-                Height = 420
+                Height = 420,
             };
+
+            g.AddToCartButtonClicked += AddToCartButtonClickedInUserControl;
 
             g.ProductImage.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative));
             g.ProductName.Content = name;
@@ -203,6 +204,7 @@ namespace Big_Bucks_Coffee
 
         private void AddProductToCart(Beverage selectedBeverage)
         {
+            ProductInfo productInfo = new ProductInfo();
             Image myImage = new Image();
             BitmapImage imageSource = new BitmapImage();
             imageSource.BeginInit();
@@ -211,10 +213,11 @@ namespace Big_Bucks_Coffee
             myImage.Source = imageSource;
             myImage.Stretch = Stretch.Uniform;
 
-            ProductInfo ProductInfo = new ProductInfo();
+            productInfo.ProductImage.Source = imageSource;
+            productInfo.ProductDescription.Text = selectedBeverage.Description;
 
-            ProductInfo.ProductImage.Source = imageSource;
-            NavigationService.Navigate(ProductInfo);
+            MessageBox.Show(productInfo.ToString());
+            NavigationService.Navigate(productInfo);
         }
 
         private void Sluiten(object sender, RoutedEventArgs e)

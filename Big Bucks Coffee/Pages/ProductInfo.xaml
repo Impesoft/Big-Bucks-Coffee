@@ -21,5 +21,6 @@
         </Grid.RowDefinitions>
         <Image x:Name="ProductImage" Height="auto" Width="auto" Grid.Column="0" Grid.Row="0">
         </Image>
+        <TextBlock x:Name="ProductDescription" Text="TextBlock" TextWrapping="Wrap" Grid.Column="1" />
     </Grid>
 </Page>
