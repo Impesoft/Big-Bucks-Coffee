@@ -1,6 +1,6 @@
 ﻿namespace Big_Bucks_Coffee
 {
-    internal abstract class Tea : Beverage
+    internal abstract class _Tea : Beverage
     {
         public int Theine { get; set; }
 
@@ -8,10 +8,11 @@
 
         public bool HasSugar { get; set; }
 
-        public Tea()
+        public _Tea()
         {
             Name = "Tea";
-            Image = "/Images/mint.jpg";
+            Image = "/Images/Tea.png";
+            DefaultImage = "/Images/Tea.png";
         }
     }
 }

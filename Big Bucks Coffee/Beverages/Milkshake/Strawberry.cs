@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Big_Bucks_Coffee
 {
-    internal class Strawberry : Milkshake
+    internal class Strawberry : _Milkshake
     {
         public bool IsFrozenFruit { get; set; }
 

@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Big_Bucks_Coffee
 {
-    internal class Mint : Tea
+    internal class Mint : _Tea
     {
         //public typeOfTea TypeOfTea { get; set; }
 

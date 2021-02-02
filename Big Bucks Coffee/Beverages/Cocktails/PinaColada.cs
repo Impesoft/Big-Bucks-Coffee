@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Big_Bucks_Coffee
 {
-    internal class PinaColada : Cocktail
+    internal class PinaColada : _Cocktail
     {
         public PinaColada()
 

@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Big_Bucks_Coffee
 {
-    internal class coffee : Espresso
+    internal class coffee : _Espresso
     {
         public coffee()
         {

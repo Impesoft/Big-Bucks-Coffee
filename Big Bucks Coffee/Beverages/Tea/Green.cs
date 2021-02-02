@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Big_Bucks_Coffee
 {
-    internal class Green : Tea
+    internal class Green : _Tea
     {
         public Green()
         {

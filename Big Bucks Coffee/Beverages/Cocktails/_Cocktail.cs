@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Big_Bucks_Coffee
 {
-    internal abstract class Cocktail : Beverage
+    internal abstract class _Cocktail : Beverage
     {
         public bool HasIce { get; set; }
 
         public int PercentageAlcohol { get; set; }
 
-        protected Cocktail()
+        protected _Cocktail()
         {
             Name = "Coctail";
-            Image = "/Images/iced.jpg";
+            Image = "/Images/Cocktail.png";
+            DefaultImage = "/Images/Cocktail.png";
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Big_Bucks_Coffee
 {
-    internal class WhiteRussian : Cocktail
+    internal class WhiteRussian : _Cocktail
     {
         public WhiteRussian()
 

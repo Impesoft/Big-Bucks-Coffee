@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Windows.Controls;
 
 namespace Big_Bucks_Coffee
 {
-    public abstract class Beverage : IBeverage
+    internal abstract class Beverage : IBeverage
     {
         private double _price;
 
@@ -16,6 +17,9 @@ namespace Big_Bucks_Coffee
         public string Description { get; set; }
 
         private static int PID = 1;
+
+        public string DefaultImage { get; set; }
+
         public int ID { get; set; }
 
         public string Image { get; set; }

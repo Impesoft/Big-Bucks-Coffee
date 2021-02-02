@@ -7,17 +7,18 @@ using System.Windows.Controls;
 
 namespace Big_Bucks_Coffee
 {
-    internal class Espresso : Beverage
+    internal class _Espresso : Beverage
     {
         public bool HasMilk { get; set; }
 
         public bool HasSugar { get; set; }
 
-        public Espresso()
+        public _Espresso()
         {
             Name = "Espresso";
             Price = 2.99;
-            Image = "/Images/espresso.jpg";
+            Image = "/Images/Coffee.png";
+            DefaultImage = "/Images/Coffee.png";
             Description = "Espresso is a coffee-brewing method of Italian origin, in which a small amount of nearly boiling water is forced under 9–10 bars of atmospheric pressure through finely-ground coffee beans. Espresso coffee can be made with a wide variety of coffee beans and roast degrees.";
         }
 

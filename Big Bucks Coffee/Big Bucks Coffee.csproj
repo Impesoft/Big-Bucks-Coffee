@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="americano-small.png" />
+    <None Remove="americano.jpg" />
     <None Remove="Assets\all-kinds-of-herbal-tea-500x500.jpg" />
     <None Remove="Assets\americano-small.jpg" />
     <None Remove="Assets\americano-small.png" />
@@ -35,13 +36,18 @@
     <None Remove="Images\black.jpg" />
     <None Remove="Images\cappuccino.jpg" />
     <None Remove="Images\chocolate.jpg" />
+    <None Remove="Images\Cocktail.png" />
+    <None Remove="Images\Coffee.png" />
     <None Remove="Images\deca.jpg" />
     <None Remove="Images\espresso.jpg" />
     <None Remove="Images\green.jpg" />
     <None Remove="Images\iced.jpg" />
+    <None Remove="Images\Milkshake.png" />
     <None Remove="Images\mint.jpg" />
     <None Remove="Images\strawberry.jpg" />
+    <None Remove="Images\Tea.png" />
     <None Remove="Images\vanilla.jpg" />
+    <None Remove="Pages\Splash.png" />
     <None Remove="unnamed.jpg" />
   </ItemGroup>
 
@@ -51,6 +57,7 @@
 
   <ItemGroup>
     <Resource Include="americano-small.png" />
+    <Resource Include="americano.jpg" />
     <Resource Include="Assets\all-kinds-of-herbal-tea-500x500.jpg" />
     <Resource Include="Assets\americano-small.jpg" />
     <Resource Include="Assets\americano-small.png" />
@@ -76,14 +83,26 @@
     <Resource Include="Images\black.jpg" />
     <Resource Include="Images\cappuccino.jpg" />
     <Resource Include="Images\chocolate.jpg" />
+    <Resource Include="Images\Cocktail.png" />
+    <Resource Include="Images\Coffee.png" />
     <Resource Include="Images\deca.jpg" />
     <Resource Include="Images\espresso.jpg" />
     <Resource Include="Images\green.jpg" />
     <Resource Include="Images\iced.jpg" />
+    <Resource Include="Images\Milkshake.png" />
     <Resource Include="Images\mint.jpg" />
     <Resource Include="Images\strawberry.jpg" />
+    <Resource Include="Images\Tea.png" />
     <Resource Include="Images\vanilla.jpg" />
+    <Resource Include="Pages\Splash.png" />
     <Resource Include="unnamed.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="StartPage - Copy.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>StartPage.xaml.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

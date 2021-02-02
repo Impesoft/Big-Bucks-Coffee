@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace Big_Bucks_Coffee
 {
-    internal class Americano : Espresso
+    internal class Americano : _Espresso
     {
         // public typeOfRoast TypeOfRoast { get; set; }
 
